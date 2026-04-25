@@ -1,0 +1,51 @@
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  }
+
+  [dir="rtl"] body {
+    font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+/* Leaflet map theming */
+.leaflet-container {
+  background: var(--color-muted);
+  font-family: inherit;
+  height: 300px;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elegant);
+  padding: 0;
+  overflow: hidden;
+}
+.leaflet-popup-content {
+  margin: 0.75rem 1rem;
+  font-family: inherit;
+}
+.leaflet-popup-tip {
+  box-shadow: var(--shadow-soft);
+}
+.leaflet-control-zoom a {
+  border-radius: var(--radius-md) !important;
+  color: var(--color-foreground) !important;
+  background: var(--color-card) !important;
+  border-color: var(--color-border) !important;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.user-marker-pulse {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
