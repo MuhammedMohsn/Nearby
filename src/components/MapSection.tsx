@@ -25,7 +25,7 @@ export function MapSection({
       {mounted && coords ? (
         <Suspense
           fallback={
-            <div className="flex h-full items-center justify-center text-muted-foreground">
+            <div className="flex h-full items-center justify-center">
               <Loader2 className="h-5 w-5 animate-spin" />
             </div>
           }
@@ -39,7 +39,7 @@ export function MapSection({
           />
         </Suspense>
       ) : (
-        <div className="flex h-full items-center justify-center text-muted-foreground">
+        <div className="flex h-full items-center justify-center">
           <Loader2 className="h-5 w-5 animate-spin" />
         </div>
       )}

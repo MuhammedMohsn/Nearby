@@ -22,7 +22,7 @@ export function PlacesList({
 
   if (loading) {
     return (
-      <div className="flex h-full items-center justify-center text-muted-foreground w-75">
+      <div className="flex h-full items-center justify-center w-75">
         <span>{t("Loading...")}</span>
         <Loader2 className="h-5 w-5 animate-spin" />
       </div>
